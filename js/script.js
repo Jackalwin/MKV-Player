@@ -19,4 +19,7 @@ btn.onclick = function(){
 video.addEventListener('timeupdate', function(){
   var juicePos = video.currentTime / video.duration;
   juice.style.width = juicePos * 100 + "%";
+  if (video.ended){
+   btn.className= "play";
+  }
 }) 
