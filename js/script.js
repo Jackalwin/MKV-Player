@@ -15,3 +15,8 @@ function togglePlayPause(){
 btn.onclick = function(){
   togglePlayPause();
 }  
+
+video.addEventListener('timeupdate', function(){
+  var juicePos = video.currentTime / video.duration;
+  juice.style.width = juicePos * 100 + "%";
+}) 
